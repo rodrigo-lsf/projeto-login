@@ -5,23 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="estilos/style.css">
-    <style>
-        body {
-            background-color: gray;
-        }
-    </style>
 </head>
 <body>
     <main>
         <section id="login">
             <div id="imagem">
-                Foto
+                <!-- Aqui vai a imagem nas CSS -->
             </div>
             <div id="formulario">
                 <h1>Login</h1>
                 <p>Seja bem-vindo(a) novamente. Faça login para acessar sua conta e poder fazer as configurações no seu ambiente.</p>
-                <form action="login.php" method="post">
-
+                <form action="login.php" method="post" autocomplete="on">
+                    <div id="login">
+                        <label for="email">Login: </label>
+                        <input type="email" name="email" id="email" required placeholder="seu e-mail" autocomplete="email">
+                    </div>
+                    <div id="senha">
+                        <label for="senha">Senha: </label>
+                        <input type="password" name="senha" id="senha" required minlength="8" maxlength="20" placeholder="sua senha" autocomplete="current-password">
+                    </div>
                 </form>
             </div>
         </section>
